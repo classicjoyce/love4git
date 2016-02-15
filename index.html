@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>LOVEUGIT</title>
 	<link rel="stylesheet" href="css/git-style.css">
 </head>
 <body>
@@ -10,53 +10,165 @@
 	
 <!-- section>(article.item>div.command+div.function)*10 -->
 
-<section>
+<section class="left">
+	
+
+	<h1>COMMIT HISTORY</h1>
 	<article class="item">
-		<div class="command">ls</div>
-		<div class="function">Lists the current directory's content</div>
+		<div class="command">$ git log</div>
+		<div class="function">Show all commits, starting with newest</div>
+	</article>
+
+	<article class="item">
+		<div class="command">$ git log -p <i>file</i></div>
+		<div class="function">Show changes over time for a specific file</div>
 	</article>
 	<article class="item">
-		<div class="command">cd</div>
-		<div class="function">Change directory</div>
+		<div class="command">$ git blame <i>file</i></div>
+		<div class="function">Who changed what and when in <i>file</i></div>
+	</article>
+	
+	<h1>LOCAL CHANGES</h1>
+	<article class="item">
+		<div class="command">$ git status</div>
+		<div class="function">Changed files in your working directory</div>
 	</article>
 	<article class="item">
-		<div class="command">pwd</div>
-		<div class="function">Shows present working directory</div>
+		<div class="command">$ git diff</div>
+		<div class="function">Changes to tracked files</div>
 	</article>
 	<article class="item">
-		<div class="command"></div>
-		<div class="function"></div>
+		<div class="command">$ git add .</div>
+		<div class="function">Add all current  changes to the next commit</div>
 	</article>
 	<article class="item">
-		<div class="command"></div>
-		<div class="function"></div>
+		<div class="command">$ git add -p <i>file</i></div>
+		<div class="function">Add some changes in <i>file</i> to the next commit</div>
 	</article>
 	<article class="item">
-		<div class="command"></div>
-		<div class="function"></div>
+		<div class="command">$ git commit -a</div>
+		<div class="function">Commit all local changes in tracked files</div>
 	</article>
 	<article class="item">
-		<div class="command"></div>
-		<div class="function"></div>
+		<div class="command">$ git commit</div>
+		<div class="function">Commit previously staged changes</div>
 	</article>
 	<article class="item">
-		<div class="command"></div>
-		<div class="function"></div>
+		<div class="command">$ git commit --amend</div>
+		<div class="function">Change the last commit, <i>Don't amend published commits!</i></div>
+	</article>
+
+
+	<h1>BRANCHES AND TAGS</h1>
+	<article class="item">
+		<div class="command">$ git branch -av</div>
+		<div class="function">List all existing branches</div>
 	</article>
 	<article class="item">
-		<div class="command"></div>
-		<div class="function"></div>
+		<div class="command">$ git checkout <i>branch</i></div>
+		<div class="function">Switch HEAD branch</div>
 	</article>
 	<article class="item">
-		<div class="command"></div>
-		<div class="function"></div>
+		<div class="command">$ git branch <i>new-branch</i></div>
+		<div class="function">Create a new branch based on curent HEAD</div>
+	</article>
+	<article class="item">
+		<div class="command">$ git checkout --track <i>remote/branch</i></div>
+		<div class="function">Create a new tracking branch based on a remote branch</div>
+	</article>
+	<article class="item">
+		<div class="command">$ git branch -d <i>branch</i></div>
+		<div class="function">Delete a local branch</div>
+	</article>
+	<article class="item">
+		<div class="command">$ git tag <i>tag-name</i></div>
+		<div class="function">Mark the current commit with a tag</div>
 	</article>
 </section>
 
 
+
+
+<section class="right">
+
+	<h1>CREATE</h1>
+	<article class="item">
+		<div class="command">$ git clone ssh://user@domain.com/repo.git</div>
+		<div class="function">Clone an existing repository</div>
+	</article>
+	<article class="item">
+		<div class="command">$ git init</div>
+		<div class="function">Create a local repository</div>
+	</article>
+
+<h1>UPDATE AND PUBLISH</h1>
+	<article class="item">
+		<div class="command">$ git remote -v</div>
+		<div class="function">List all currently configured remotes</div>
+	</article>
+	<article class="item">
+		<div class="command">$ git remote show <i>remote</i></div>
+		<div class="function">Show informatio about a remote</div>
+	</article>
+
+	<article class="item">
+		<div class="command">$ git remote add <i>shortname</i> <i>url</i></div>
+		<div class="function">Add a new repository, named <i>remote</i></div>
+	</article>
+	<article class="item">
+		<div class="command">$ git fetch <i>remote</i></div>
+		<div class="function">Download all changes from <i>remote</i> but don't integrate into HEAD</div>
+	</article>
+	<article class="item">
+		<div class="command">$ git pull <i>remote</i> <i>branch</i></div>
+		<div class="function">Download changes and directly merge/integrate into HEAD</div>
+	</article>
+	<article class="item">
+		<div class="command">$ git push <i>remote</i> <i>branch</i></div>
+		<div class="function">Publish local changes on a remote</div>
+	</article>
+	<article class="item">
+		<div class="command">$ git branch -dr <i>remote/branch</i> </div>
+		<div class="function">Delete a branch on the remote</div>
+	</article>
+	<article class="item">
+		<div class="command">$ git push --tags</div>
+		<div class="function">Publish your tags</div>
+	</article>
+
+	<h1>MERGE AND REBASE</h1>
+	<article class="item">
+		<div class="command">$ git merge <i>branch</i></div>
+		<div class="function">Merge <i>branch</i> into your current HEAD</div>
+	</article>
+	<article class="item">
+		<div class="command">$ git rebase <i>branch</i></div>
+		<div class="function">Rebase your current HEAD into <i>branch</i>. <i>Like amending, don't rebase published commits!</i> </div>
+	</article>
+	<article class="item">
+		<div class="command">$ git rebase --abort</div>
+		<div class="function">Abort a rebase</div>
+	</article>
+	<article class="item">
+		<div class="command">$ git rebase --continue</div>
+		<div class="function">Contine a rebase after resolving conflicts</div>
+	</article>
+
+	<article class="item">
+		<div class="command">$ git mergetool</div>
+		<div class="function">Use your configured merge tool to solve conflicts</div>
+	</article>
+	<article class="item">
+		<div class="command">$ git add <i>resolved-file</i> OR $ git rm <i>resolved-file</i></div>
+		<div class="function">Use your editor to manually solve conflicts and (after resolving) mark file as resolved</div>
+	</article>
+	</section>
+
+
+
 <p>
 
-Add some interesting content here...
+
 
 </p>
 	
